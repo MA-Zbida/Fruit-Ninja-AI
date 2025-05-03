@@ -85,5 +85,5 @@ Install dependencies:
 ## 📬 Contact
 
 For questions or collaboration: **\[ABDERRAZAK KHALIL] – AI Engineer** & **\[ZBIDA MOHAMMED AMINE ] – AI Engineer** 
-📧 Email: \[[your\_email@example.com](mailto:khalilabderrazak1@gmail.com)]
+📧 Email: \[[send mail](mailto:khalilabderrazak1@gmail.com)]
 
