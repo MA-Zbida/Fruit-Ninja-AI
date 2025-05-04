@@ -85,7 +85,10 @@ python src/main.py
 
 ## 📬 Contact
 
-For questions or collaboration: **\[ABDERRAZAK KHALIL] – AI Engineering Student** & **\[ZBIDA MOHAMMED AMINE ] – AI Engineering Student** 
+For questions or collaboration: 
+**\[ABDERRAZAK KHALIL] – AI Engineering Student** 
+**\[ZBIDA MOHAMMED AMINE ] – AI Engineering Student** 
+
 📧 Email: \[[Abderrazak Khalil](mailto:khalilabderrazak1@gmail.com)]
 📧 Email: \[[Mohamed Amine Zbida](mailto:itzzbida@gmail.com)]
 
