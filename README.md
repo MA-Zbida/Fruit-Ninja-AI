@@ -79,6 +79,16 @@ Install dependencies:
 
 ##  Run the Project
 
+Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+Install Dependencies and run the script
+```bash
+pip install -r src/requirements.txt
+python src/main.py
+```
 
 
 ## 📬 Contact
