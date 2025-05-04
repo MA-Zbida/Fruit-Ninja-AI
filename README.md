@@ -73,8 +73,8 @@ To maximize score while minimizing risk:
 
 Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/MA-Zbida/Fruit-Ninja-AI.git
+cd Fruit-Nnja-AI
 ```
 Install Dependencies and run the script
 ```bash
