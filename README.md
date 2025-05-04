@@ -18,15 +18,17 @@ fruit-ninja-v8/
 │   ├── images/           # Game screenshots
 │   └── labels/           # YOLO-format annotations
 ├── src/                  
-│   ├── detector.py       # YOLOv8 nano inference and processing
-│   ├── astar.py          # A* pathfinding logic for optimal slicing
-│   ├── controller.py     # Controls the slicing motions (mouse/touch)
-│   ├── screen_capture.py # Captures game screen in real time
-│   └── utils.py          # Helper functions
-├── model/
-│   └── fruitninja_v8.pt  # Trained YOLOv8-nano model
-├── metrics/
-│   └── confusion_matrix.png  # Visual metrics and evaluation results
+│   ├── Fruit.py       # Defines the structure of an object
+|   ├── 
+│   ├── Astar.py             # A* pathfinding logic for optimal slicing
+│   ├── VideoRecorder.py     # Records the game for future analysis
+│   ├── ScreenCapture.py     # Captures game screen in real time
+│   ├── main.py              # main script
+├── Model YOLOv8n/
+│   ├── fruit_ninja_v8.pt       # Trained YOLOv8-nano model
+|   ├── Confusion Matrix.jpeg   # Confusion Matrix
+|   ├── Metrics.jpeg            # Metrics 
+|   ├── Validation.jpeg         # Some Validation Images
 ├── README.md             # Project overview and setup instructions
 ```
 
@@ -36,13 +38,13 @@ fruit-ninja-v8/
 
 * **Architecture**: YOLOv8-nano (Ultralytics)
 * **Classes**: Fruits (banana, apple, etc.), Bombs, Special items
-* **Input size**: 320x320
+* **Input size**: 640x640
 * **Training Data**: \~1500 images captured from gameplay
 * **Annotation Format**: YOLOv5/8-style `.txt` files
 
 ### ✅ Evaluation Metrics:
 
-* **Precision, Recall, mAP** at 0.5 and 0.5:0.95
+* **Precision, Recall, mAP** almost 1.0 (check Model YOLOv8n/Metrics.png)
 * **Confusion matrix** visualized in `/metrics/`
 
 
@@ -56,7 +58,7 @@ To maximize score while minimizing risk:
 
 ## 🖥️ How It Works
 
-1. **Screen Capture**: Continuously grabs game frames.
+1. **Screen Capture & Start Recording if needed**: Continuously grabs game frames.
 2. **Detection**: Passes frame to YOLOv8 model.
 3. **Analysis**: Finds fruit positions, avoids bombs.
 4. **A* Controller*\*: Calculates best swipe path.
@@ -65,10 +67,8 @@ To maximize score while minimizing risk:
 
 ## 🚧 Under Development
 
-* [ ] Improved bomb avoidance logic
-* [ ] Enhanced A\* slicing in real-time
-* [ ] Game speed adaptation
-* [ ] Full automation to beat high scores
+* [ ] Improving bomb avoidance logic
+* [ ] Using a faster Screen Capture instead of mss
 
 ## 📌 Requirements
 
@@ -84,6 +84,8 @@ Install dependencies:
 
 ## 📬 Contact
 
-For questions or collaboration: **\[ABDERRAZAK KHALIL] – AI Engineer** & **\[ZBIDA MOHAMMED AMINE ] – AI Engineer** 
-📧 Email: \[[send mail](mailto:khalilabderrazak1@gmail.com)]
+For questions or collaboration: **\[ABDERRAZAK KHALIL] – AI Engineering Student** & **\[ZBIDA MOHAMMED AMINE ] – AI Engineering Student** 
+📧 Email: \[[Abderrazak Khalil](mailto:khalilabderrazak1@gmail.com)]
+📧 Email: \[[Mohamed Amine Zbida](mailto:itzzbida@gmail.com)]
+
 
