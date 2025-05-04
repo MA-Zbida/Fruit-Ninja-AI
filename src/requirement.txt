@@ -1,0 +1,7 @@
+torch
+keyboard
+opencv-python
+mss
+numpy
+pynput
+ultralytics
