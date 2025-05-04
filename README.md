@@ -69,14 +69,6 @@ To maximize score while minimizing risk:
 * [ ] Improving bomb avoidance logic
 * [ ] Using a faster Screen Capture instead of mss
 
-## 📌 Requirements
-
-* Python 3.8+
-* `ultralytics`, `opencv-python`, `numpy`, `pyautogui`, `mss`, etc.
-
-Install dependencies:
-
-
 ##  Run the Project
 
 Clone the repository
