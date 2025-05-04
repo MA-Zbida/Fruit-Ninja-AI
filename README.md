@@ -19,7 +19,6 @@ fruit-ninja-v8/
 │   └── labels/           # YOLO-format annotations
 ├── src/                  
 │   ├── Fruit.py       # Defines the structure of an object
-|   ├── 
 │   ├── Astar.py             # A* pathfinding logic for optimal slicing
 │   ├── VideoRecorder.py     # Records the game for future analysis
 │   ├── ScreenCapture.py     # Captures game screen in real time
