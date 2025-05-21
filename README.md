@@ -77,9 +77,11 @@ Clone the repository
 git clone https://github.com/MA-Zbida/Fruit-Ninja-AI.git
 cd Fruit-Nnja-AI
 ```
-Install Dependencies and run the script
+**Make sure you have fruit ninja installed**
 ```bash
 pip install -r src/requirements.txt
+```
+**run this when you want to load up the game**
 python src/main.py
 ```
 
