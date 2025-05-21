@@ -23,6 +23,7 @@ fruit-ninja-v8/
 │   ├── VideoRecorder.py     # Records the game for future analysis
 │   ├── ScreenCapture.py     # Captures game screen in real time
 │   ├── main.py              # main script
+|   └── requirement.txt      # the libraries used
 ├── Model YOLOv8n/
 │   ├── fruit_ninja_v8.pt       # Trained YOLOv8-nano model
 |   ├── Confusion Matrix.jpeg   # Confusion Matrix
