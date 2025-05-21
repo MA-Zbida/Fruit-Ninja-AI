@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍉 Fruit Ninja V8 – Object Detection &amp; Smart Auto-Player &mdash; Documentation FruitNinja </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d1a510d7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="UML Diagrams" href="index2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            FruitNinja
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index2.html">UML Diagrams</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">FruitNinja</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🍉 Fruit Ninja V8 – Object Detection &amp; Smart Auto-Player</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fruit-ninja-v8-object-detection-smart-auto-player">
+<h1>🍉 Fruit Ninja V8 – Object Detection &amp; Smart Auto-Player<a class="headerlink" href="#fruit-ninja-v8-object-detection-smart-auto-player" title="Lien vers cette rubrique"></a></h1>
+<p>This project is an under-development AI system designed to <strong>detect fruits, bombs, and game elements in Fruit Ninja</strong>, using a custom-trained <strong>YOLOv8-nano</strong> model and control a <strong>smart slicing system</strong> based on <strong>A* pathfinding</strong> for optimized scoring.</p>
+<section id="project-goals">
+<h2>Project Goals<a class="headerlink" href="#project-goals" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Train a lightweight, real-time object detection model for Fruit Ninja.</p></li>
+<li><p>Integrate an intelligent auto-slicing strategy using <strong>A* algorithm</strong> to cut fruits while avoiding bombs.</p></li>
+<li><p>Capture screen frames, detect objects, and control slicing motions to beat the <strong>highest possible score</strong> in the game.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Lien vers cette rubrique"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fruit-ninja-v8/
+├──<span class="w"> </span>data/<span class="w">                 </span><span class="c1"># ~1500 labeled images (YOLO format)</span>
+│<span class="w">   </span>├──<span class="w"> </span>images/<span class="w">           </span><span class="c1"># Game screenshots</span>
+│<span class="w">   </span>└──<span class="w"> </span>labels/<span class="w">           </span><span class="c1"># YOLO-format annotations</span>
+├──<span class="w"> </span>src/
+│<span class="w">   </span>├──<span class="w"> </span>Fruit.py<span class="w">          </span><span class="c1"># Defines the structure of an object</span>
+│<span class="w">   </span>├──<span class="w"> </span>Astar.py<span class="w">          </span><span class="c1"># A* pathfinding logic for optimal slicing</span>
+│<span class="w">   </span>├──<span class="w"> </span>VideoRecorder.py<span class="w">  </span><span class="c1"># Records the game for future analysis</span>
+│<span class="w">   </span>├──<span class="w"> </span>ScreenCapture.py<span class="w">  </span><span class="c1"># Captures game screen in real time</span>
+│<span class="w">   </span>├──<span class="w"> </span>main.py<span class="w">           </span><span class="c1"># main script</span>
+<span class="p">|</span><span class="w">   </span>└──<span class="w"> </span>requirement.txt<span class="w">   </span><span class="c1"># the libraries used</span>
+├──<span class="w"> </span>Model<span class="w"> </span>YOLOv8n/
+│<span class="w">   </span>├──<span class="w"> </span>fruit_ninja_v8.pt<span class="w">       </span><span class="c1"># Trained YOLOv8-nano model</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Confusion<span class="w"> </span>Matrix.jpeg<span class="w">   </span><span class="c1"># Confusion Matrix</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Metrics.jpeg<span class="w">            </span><span class="c1"># Metrics</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Validation.jpeg<span class="w">         </span><span class="c1"># Some Validation Images</span>
+├──<span class="w"> </span>README.md<span class="w">             </span><span class="c1"># Project overview and setup instructions</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="ai-model-yolov8-nano">
+<h2>🧠 AI Model: YOLOv8-Nano<a class="headerlink" href="#ai-model-yolov8-nano" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Architecture</strong>: YOLOv8-nano (Ultralytics)</p></li>
+<li><p><strong>Classes</strong>: Fruits (banana, apple, etc.), Bombs, Special items</p></li>
+<li><p><strong>Input size</strong>: 640x640</p></li>
+<li><p><strong>Training Data</strong>: ~1500 images captured from gameplay</p></li>
+<li><p><strong>Annotation Format</strong>: YOLOv5/8-style <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files</p></li>
+</ul>
+<section id="evaluation-metrics">
+<h3>✅ Evaluation Metrics:<a class="headerlink" href="#evaluation-metrics" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>Precision, Recall, mAP</strong> almost 1.0 (check Model YOLOv8n/Metrics.png)</p></li>
+<li><p><strong>Confusion matrix</strong> visualized in <code class="docutils literal notranslate"><span class="pre">/metrics/</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="slicing-ai-a-path-optimizer">
+<h2>🤖 Slicing AI – A* Path Optimizer<a class="headerlink" href="#slicing-ai-a-path-optimizer" title="Lien vers cette rubrique"></a></h2>
+<p>To maximize score while minimizing risk:</p>
+<ul class="simple">
+<li><p>Uses the <strong>A* algorithm</strong> to calculate the optimal path through fruit clusters.</p></li>
+<li><p>Avoids bombs and plans cuts that maximize combos and bonuses.</p></li>
+</ul>
+</section>
+<section id="how-it-works">
+<h2>🖥️ How It Works<a class="headerlink" href="#how-it-works" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Screen Capture &amp; Start Recording if needed</strong>: Continuously grabs game frames.</p></li>
+<li><p><strong>Detection</strong>: Passes frame to YOLOv8 model.</p></li>
+<li><p><strong>Analysis</strong>: Finds fruit positions, avoids bombs.</p></li>
+<li><p><strong>A* Controller</strong>: Calculates best swipe path.</p></li>
+<li><p><strong>Input Trigger</strong>: Sends slicing gesture via system mouse/touch input.</p></li>
+</ol>
+</section>
+<section id="under-development">
+<h2>🚧 Under Development<a class="headerlink" href="#under-development" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>[ ] Improving bomb avoidance logic</p></li>
+<li><p>[ ] Using a faster Screen Capture instead of mss</p></li>
+</ul>
+</section>
+<section id="run-the-project">
+<h2>Run the Project<a class="headerlink" href="#run-the-project" title="Lien vers cette rubrique"></a></h2>
+<p>Clone the repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MA-Zbida/Fruit-Ninja-AI.git
+<span class="nb">cd</span><span class="w"> </span>Fruit-Nnja-AI
+</pre></div>
+</div>
+<p>Install Dependencies and run the script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>src/requirements.txt
+python<span class="w"> </span>src/main.py
+</pre></div>
+</div>
+</section>
+<section id="contact">
+<h2>📬 Contact<a class="headerlink" href="#contact" title="Lien vers cette rubrique"></a></h2>
+<p>For questions or collaboration:</p>
+<p><strong>[ABDERRAZAK KHALIL] – AI Engineering Student</strong></p>
+<p><strong>[ZBIDA MOHAMMED AMINE] – AI Engineering Student</strong></p>
+<p>📧 Email: <a class="reference external" href="mailto:khalilabderrazak1&#37;&#52;&#48;gmail&#46;com">[Abderrazak Khalil]</a></p>
+<p>📧 Email: <a class="reference external" href="mailto:itzzbida&#37;&#52;&#48;gmail&#46;com">[Mohamed Amine Zbida]</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index2.html">UML Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#class-diagram">Class Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#sequence-diagram">Sequence Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#use-case-diagram">Use Case Diagram</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="index2.html" class="btn btn-neutral float-right" title="UML Diagrams" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, AMINE KHALIL.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
