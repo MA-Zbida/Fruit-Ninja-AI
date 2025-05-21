@@ -17,6 +17,7 @@ fruit-ninja-v8/
 ├── data/                 # ~1500 labeled images (YOLO format)
 │   ├── images/           # Game screenshots
 │   └── labels/           # YOLO-format annotations
+├── Videos/               # Videos of current Scores
 ├── src/                  
 │   ├── Fruit.py       # Defines the structure of an object
 │   ├── Astar.py             # A* pathfinding logic for optimal slicing
@@ -24,6 +25,7 @@ fruit-ninja-v8/
 │   ├── ScreenCapture.py     # Captures game screen in real time
 │   ├── main.py              # main script
 |   └── requirement.txt      # the libraries used
+|   ├── mainGame.py          # All in one code
 ├── Model YOLOv8n/
 │   ├── fruit_ninja_v8.pt       # Trained YOLOv8-nano model
 |   ├── Confusion Matrix.jpeg   # Confusion Matrix
