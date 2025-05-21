@@ -23,7 +23,7 @@ The sequence diagram illustrates the interactions between the different componen
 
 This diagram allows understanding of the flow of operations from the screenshot capture to the slicing of the fruits, passing through object detection and calculation of the optimal path.
 
-.. figure:: _static/images/sequence.jpg
+.. figure:: build/html/_static/images/sequence.jpg
    :width: 100%
    :align: center
    :alt: Fruit Ninja V8 Sequence Diagram
