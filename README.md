@@ -82,6 +82,7 @@ cd Fruit-Nnja-AI
 pip install -r src/requirements.txt
 ```
 **run this when you want to load up the game**
+```bash
 python src/main.py
 ```
 
