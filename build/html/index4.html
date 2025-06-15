@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collecte et Préparation des Données &mdash; Documentation FruitNinja </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d1a510d7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Class Diagram" href="index3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            FruitNinja
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenus:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index2.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#defis-de-vision-par-ordinateur-dans-fruit-ninja">Défis de Vision par Ordinateur dans Fruit Ninja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#avantages-pedagogiques-et-pratiques">Avantages Pédagogiques et Pratiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#applications-transferables">Applications Transférables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#pourquoi-ia-dans-fruit-nnija">Pourquoi IA dans Fruit Nnija</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html">Class Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#sequence-diagram">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#use-case-diagram">Use Case Diagram</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Collecte et Préparation des Données</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#processus-de-capture-d-images">Processus de Capture d’Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotation-et-etiquetage">Annotation et Étiquetage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#modele-yolov8-nano-architecture-et-performance">Modèle YOLOv8-Nano : Architecture et Performance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#choix-du-modele">Choix du Modèle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metriques-de-performance">Métriques de Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-du-systeme-de-decision">Architecture du Système de Décision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algorithme-a-pour-l-optimisation-de-trajectoire">Algorithme A* pour l’Optimisation de Trajectoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strategies-de-decoupe-avancees">Stratégies de Découpe Avancées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execution-et-controle-des-mouvements">Exécution et Contrôle des Mouvements</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FruitNinja</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Collecte et Préparation des Données</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index4.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="_static/images/logo.png" alt="Logo" width="80" style="margin-right: 20px;">
+  <h1 style="margin: 0;">Collecte de Données, Modélisation et Techniques de Découpe</h1>
+</div><hr class="docutils" />
+<p>Ce document détaille le processus complet de développement du système d’IA pour Fruit Ninja, depuis la collecte des données jusqu’aux techniques de découpe automatisée.</p>
+<section id="collecte-et-preparation-des-donnees">
+<h1>Collecte et Préparation des Données<a class="headerlink" href="#collecte-et-preparation-des-donnees" title="Lien vers cette rubrique"></a></h1>
+<section id="processus-de-capture-d-images">
+<h2>Processus de Capture d’Images<a class="headerlink" href="#processus-de-capture-d-images" title="Lien vers cette rubrique"></a></h2>
+<p>La création d’un dataset de qualité constitue la première étape cruciale du projet. Pour obtenir des données représentatives du jeu Fruit Ninja, un processus de capture systématique a été mis en place.</p>
+<p><strong>Méthode de Capture</strong> : Plusieurs heures de jeu ont été consacrées à la collecte de données, utilisant la bibliothèque Python MSS (Multi-Screen Screenshots) pour capturer les images d’écran en temps réel. Cette approche garantit une capture haute fréquence et non intrusive du gameplay.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mss</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">capture_gameplay</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">mss</span><span class="o">.</span><span class="n">mss</span><span class="p">()</span> <span class="k">as</span> <span class="n">sct</span><span class="p">:</span>
+        <span class="c1"># Définir la zone de capture (zone de jeu)</span>
+        <span class="n">monitor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+                  <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">}</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="c1"># Capturer l&#39;écran</span>
+            <span class="n">screenshot</span> <span class="o">=</span> <span class="n">sct</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">monitor</span><span class="p">)</span>
+
+            <span class="c1"># Convertir en image PIL</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">frombytes</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">screenshot</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
+                                <span class="n">screenshot</span><span class="o">.</span><span class="n">bgra</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;BGRX&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Sauvegarder avec timestamp</span>
+            <span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+            <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data/raw_images/frame_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Capture toutes les 100ms</span>
+</pre></div>
+</div>
+<p><strong>Volume des Données</strong> : Environ 1500 images ont été collectées, représentant diverses situations de jeu : différentes combinaisons de fruits, positions des bombes, angles de lancement, et états de jeu variés.</p>
+</section>
+<section id="annotation-et-etiquetage">
+<h2>Annotation et Étiquetage<a class="headerlink" href="#annotation-et-etiquetage" title="Lien vers cette rubrique"></a></h2>
+<p>L’annotation manuelle des images a été réalisée à l’aide de la plateforme en ligne <strong>makesense.ai</strong>, un outil d’annotation gratuit et intuitif particulièrement adapté aux projets de vision par ordinateur.</p>
+<p><strong>Processus d’Annotation</strong> :</p>
+<ol class="arabic simple">
+<li><p><strong>Import des Images</strong> : Téléchargement du dataset sur makesense.ai</p></li>
+<li><p><strong>Définition des Classes</strong> :
+- Fruits (banane, pomme, orange, pastèque, etc.)
+- Bombs</p></li>
+<li><p><strong>Annotation par Bounding Box</strong> : Délimitation précise de chaque objet visible</p></li>
+<li><p><strong>Export au Format YOLO</strong> : Génération des fichiers d’annotation .txt compatibles</p></li>
+</ol>
+<p><strong>Défis d’Annotation</strong> :
+- Objets en mouvement rapide nécessitant une précision élevée
+- Superposition d’objets créant des ambiguïtés de délimitation
+- Variation d’échelle des objets selon leur position sur l’écran</p>
+</section>
+</section>
+<section id="modele-yolov8-nano-architecture-et-performance">
+<h1>Modèle YOLOv8-Nano : Architecture et Performance<a class="headerlink" href="#modele-yolov8-nano-architecture-et-performance" title="Lien vers cette rubrique"></a></h1>
+<section id="choix-du-modele">
+<h2>Choix du Modèle<a class="headerlink" href="#choix-du-modele" title="Lien vers cette rubrique"></a></h2>
+<p>Le modèle <strong>YOLOv8-nano</strong> d’Ultralytics a été sélectionné pour ce projet en raison de ses caractéristiques optimales pour une application en temps réel :</p>
+<ul class="simple">
+<li><p><strong>Légèreté</strong> : Taille de modèle réduite permettant une inférence rapide</p></li>
+<li><p><strong>Efficacité</strong> : Balance optimale entre précision et vitesse de traitement</p></li>
+<li><p><strong>Flexibilité</strong> : Architecture adaptable aux spécificités du dataset</p></li>
+</ul>
+</section>
+<section id="metriques-de-performance">
+<h2>Métriques de Performance<a class="headerlink" href="#metriques-de-performance" title="Lien vers cette rubrique"></a></h2>
+<p>Le modèle final présente des performances exceptionnelles :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/validation.png"><img alt="Importance de l'IA dans Fruit Ninja" src="_images/validation.png" style="width: 600px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/metrics.png"><img alt="Importance de l'IA dans Fruit Ninja" src="_images/metrics.png" style="width: 600px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/confusion_matrix.png"><img alt="Importance de l'IA dans Fruit Ninja" src="_images/confusion_matrix.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
+<section id="architecture-du-systeme-de-decision">
+<h2>Architecture du Système de Décision<a class="headerlink" href="#architecture-du-systeme-de-decision" title="Lien vers cette rubrique"></a></h2>
+<p>Le système de découpe automatisée repose sur une architecture modulaire combinant détection, analyse stratégique et exécution de mouvements.</p>
+<p><strong>Pipeline de Traitement</strong> :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/pipeline.png"><img alt="Importance de l'IA dans Fruit Ninja" src="_images/pipeline.png" style="width: 600px;" />
+</a>
+</figure>
+</section>
+<section id="algorithme-a-pour-l-optimisation-de-trajectoire">
+<h2>Algorithme A* pour l’Optimisation de Trajectoire<a class="headerlink" href="#algorithme-a-pour-l-optimisation-de-trajectoire" title="Lien vers cette rubrique"></a></h2>
+<p>L’algorithme A* (A-star) constitue le cœur du système de prise de décision, calculant les trajectoires optimales de découpe.</p>
+<p><strong>Principe de Fonctionnement</strong> :</p>
+<p>L’algorithme traite l’écran de jeu comme une grille où chaque position a un coût associé :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_distance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">end</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">modified_astar</span><span class="p">(</span><span class="n">start</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">bombs</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">point_inside_bomb</span><span class="p">:</span> <span class="nb">callable</span><span class="p">,</span> <span class="n">map_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">interval</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># Find the shortest path around the bombs with improved pathing for fruits near bombs</span>
+    <span class="c1"># Consider 8 directions instead of 4 to allow for more flexible paths</span>
+    <span class="n">directions</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="n">close_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">came_from</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">gscore</span> <span class="o">=</span> <span class="p">{</span><span class="n">start</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="n">fscore</span> <span class="o">=</span> <span class="p">{</span><span class="n">start</span><span class="p">:</span> <span class="n">_distance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)}</span>
+    <span class="n">open_heap</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">open_heap</span><span class="p">,</span> <span class="p">(</span><span class="n">fscore</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">start</span><span class="p">))</span>
+
+    <span class="c1"># Allow for a more direct path toward the end by weighting heuristic</span>
+    <span class="n">heuristic_weight</span> <span class="o">=</span> <span class="mf">1.2</span>
+
+    <span class="k">while</span> <span class="n">open_heap</span><span class="p">:</span>
+        <span class="c1"># Get the point with the lowest fscore</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">heapq</span><span class="o">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">open_heap</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># If the current point is the end point, reconstruct the path and return it</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">interval</span>
+            <span class="k">while</span> <span class="n">current</span> <span class="ow">in</span> <span class="n">came_from</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">interval</span><span class="p">:</span>
+                    <span class="n">path</span><span class="o">.</span><span class="n">appendleft</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+                    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">current</span> <span class="o">=</span> <span class="n">came_from</span><span class="p">[</span><span class="n">current</span><span class="p">]</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1"># Add the last point on the end fruit</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="ow">in</span> <span class="n">came_from</span><span class="p">:</span>
+                <span class="n">path</span><span class="o">.</span><span class="n">appendleft</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="c1"># Add the current point to the close set</span>
+        <span class="n">close_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+        <span class="c1"># Check the neighbors of the current point</span>
+        <span class="k">for</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="ow">in</span> <span class="n">directions</span><span class="p">:</span>
+            <span class="c1"># Get the neighbor point</span>
+            <span class="n">neighbor</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">current</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+            <span class="c1"># If the neighbor is in the close set, outside the screen, or inside a bomb, skip it</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">neighbor</span> <span class="ow">in</span> <span class="n">close_set</span> <span class="ow">or</span>
+                <span class="n">neighbor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">neighbor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">map_size</span> <span class="ow">or</span>
+                <span class="n">neighbor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">neighbor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">map_size</span> <span class="ow">or</span>
+                <span class="n">point_inside_bomb</span><span class="p">(</span><span class="n">neighbor</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">neighbor</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="kc">True</span><span class="p">)):</span>
+                <span class="n">close_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Give diagonal moves a slightly higher cost (sqrt(2) ≈ 1.414)</span>
+            <span class="n">move_cost</span> <span class="o">=</span> <span class="mf">1.414</span> <span class="k">if</span> <span class="n">dx</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dy</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">1.0</span>
+
+            <span class="c1"># Calculate the gscore of the neighbor</span>
+            <span class="n">tentative_gscore</span> <span class="o">=</span> <span class="n">gscore</span><span class="p">[</span><span class="n">current</span><span class="p">]</span> <span class="o">+</span> <span class="n">move_cost</span>
+            <span class="c1"># If the neighbor is not in the open set or the gscore is lower than the current gscore of the neighbor</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">neighbor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gscore</span> <span class="ow">or</span> <span class="n">tentative_gscore</span> <span class="o">&lt;</span> <span class="n">gscore</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]):</span>
+                <span class="c1"># Update the gscore, fscore, and add the neighbor to the open set</span>
+                <span class="n">came_from</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">=</span> <span class="n">current</span>
+                <span class="n">gscore</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">=</span> <span class="n">tentative_gscore</span>
+                <span class="c1"># Weight the heuristic to favor more direct paths</span>
+                <span class="n">fscore</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">=</span> <span class="n">gscore</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">+</span> <span class="n">heuristic_weight</span> <span class="o">*</span> <span class="n">_distance</span><span class="p">(</span><span class="n">neighbor</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+                <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">open_heap</span><span class="p">,</span> <span class="p">(</span><span class="n">fscore</span><span class="p">[</span><span class="n">neighbor</span><span class="p">],</span> <span class="n">neighbor</span><span class="p">))</span>
+    <span class="c1"># If there is no path, return an empty list</span>
+    <span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="strategies-de-decoupe-avancees">
+<h2>Stratégies de Découpe Avancées<a class="headerlink" href="#strategies-de-decoupe-avancees" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Priorisation des Cibles</strong> :</p>
+<p>Le système évalue chaque situation selon plusieurs critères :</p>
+<ol class="arabic simple">
+<li><p><strong>Sécurité</strong> : Évitement absolu des bombes (priorité maximale)</p></li>
+<li><p><strong>Efficacité</strong> : Maximisation du nombre de fruits coupés par mouvement</p></li>
+<li><p><strong>Score</strong> : Priorisation des fruits rares et objets bonus</p></li>
+<li><p><strong>Timing</strong> : Optimisation du moment de découpe selon la trajectoire</p></li>
+</ol>
+<p><strong>Techniques de Découpe</strong> :</p>
+<ul class="simple">
+<li><p><strong>Découpe Linéaire</strong> : Trajectoire droite pour fruits alignés</p></li>
+<li><p><strong>Découpe en Arc</strong> : Mouvement courbe pour capturer plusieurs groupes</p></li>
+<li><p><strong>Découpe Séquentielle</strong> : Enchaînement rapide de mouvements courts</p></li>
+<li><p><strong>Découpe d’Évitement</strong> : Contournement des bombes avec trajectoire complexe</p></li>
+</ul>
+</section>
+<section id="execution-et-controle-des-mouvements">
+<h2>Exécution et Contrôle des Mouvements<a class="headerlink" href="#execution-et-controle-des-mouvements" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Interface de Contrôle</strong> :</p>
+<p>Le système traduit les trajectoires calculées en commandes de souris précises :</p>
+<ul class="simple">
+<li><p><strong>Coordonnées de Départ</strong> : Position initiale du curseur</p></li>
+<li><p><strong>Vitesse de Mouvement</strong> : Adaptée à la distance et au timing requis</p></li>
+<li><p><strong>Précision de Trajectoire</strong> : Interpolation pour mouvements fluides (circulaires)</p></li>
+<li><p><strong>Synchronisation</strong> : Timing précis avec les objets en mouvement</p></li>
+</ul>
+<p><strong>Optimisations de Performance</strong> :</p>
+<ul class="simple">
+<li><p><strong>Prédiction de Mouvement</strong> : Anticipation des trajectoires des objets</p></li>
+<li><p><strong>Cache de Calculs</strong> : Réutilisation des chemins similaires</p></li>
+<li><p><strong>Filtrage Temporel</strong> : Lissage des décisions pour éviter les oscillations</p></li>
+<li><p><strong>Adaptation Dynamique</strong> : Ajustement en temps réel selon les performances</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="index3.html" class="btn btn-neutral float-left" title="Class Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, AMINE KHALIL.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

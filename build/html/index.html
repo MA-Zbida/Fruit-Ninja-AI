@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objectifs du Projet &mdash; Documentation FruitNinja </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d1a510d7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Introduction" href="index2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            FruitNinja
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenus:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index2.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#defis-de-vision-par-ordinateur-dans-fruit-ninja">Défis de Vision par Ordinateur dans Fruit Ninja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#avantages-pedagogiques-et-pratiques">Avantages Pédagogiques et Pratiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#applications-transferables">Applications Transférables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#pourquoi-ia-dans-fruit-nnija">Pourquoi IA dans Fruit Nnija</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html">Class Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#sequence-diagram">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#use-case-diagram">Use Case Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index4.html">Collecte et Préparation des Données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index4.html#modele-yolov8-nano-architecture-et-performance">Modèle YOLOv8-Nano : Architecture et Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html">Limitations de l’Implémentation Actuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#solutions-proposees-architecture-flexineck">Solutions Proposées : Architecture FlexiNeck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#approche-par-apprentissage-par-renforcement">Approche par Apprentissage par Renforcement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#avantages-de-l-approche-proposee">Avantages de l’Approche Proposée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#plan-de-developpement">Plan de Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#conclusion">Conclusion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">FruitNinja</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Objectifs du Projet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="_static/images/logo.png" alt="Logo" width="80" style="margin-right: 20px;">
+  <h1 style="margin: 0;">Fruit Ninja V8 – Détection d'Objets et Joueur Automatique Intelligent</h1>
+</div><hr class="docutils" />
+<p>L’intelligence artificielle progresse chaque jour un peu plus dans l’imitation des capacités humaines : comprendre le langage, voir le monde, raisonner, parler… Mais un aspect reste souvent dans l’ombre : le jeu.</p>
+<p>Et pourtant, le jeu n’est pas un simple divertissement. C’est un terrain d’expérimentation, un espace où l’on teste les limites de nos algorithmes, de nos idées, de notre imagination.</p>
+<p>Depuis les Jeux olympiques antiques jusqu’aux jeux vidéo d’aujourd’hui, le jeu a toujours été un miroir de l’intelligence humaine, un moteur d’innovation.</p>
+<p>Dans cette optique, notre projet s’inscrit dans une aventure aussi technique que ludique : créer une IA capable de jouer à Fruit Ninja.
+Un jeu rapide, visuel, imprévisible… idéal pour confronter l’intelligence artificielle au monde réel — ou presque.</p>
+<section id="objectifs-du-projet">
+<h1>Objectifs du Projet<a class="headerlink" href="#objectifs-du-projet" title="Lien vers cette rubrique"></a></h1>
+<ul class="simple">
+<li><p>Entraîner un modèle de détection d’objets léger et en temps réel pour Fruit Ninja.</p></li>
+<li><p>Intégrer une stratégie de découpe automatique intelligente utilisant <strong>l’algorithme A*</strong> pour couper les fruits tout en évitant les bombes.</p></li>
+<li><p>Capturer les images d’écran, détecter les objets et contrôler les mouvements de découpe pour battre le <strong>score le plus élevé possible</strong> dans le jeu.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="structure-du-projet">
+<h1>Structure du Projet<a class="headerlink" href="#structure-du-projet" title="Lien vers cette rubrique"></a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fruit-ninja-v8/
+├──<span class="w"> </span>src/
+│<span class="w">   </span>├──<span class="w"> </span>Fruit.py<span class="w">          </span><span class="c1"># Définit la structure d&#39;un objet</span>
+│<span class="w">   </span>├──<span class="w"> </span>Astar.py<span class="w">          </span><span class="c1"># Logique de pathfinding A* pour une découpe optimale</span>
+│<span class="w">   </span>├──<span class="w"> </span>VideoRecorder.py<span class="w">  </span><span class="c1"># Enregistre le jeu pour analyse future</span>
+│<span class="w">   </span>├──<span class="w"> </span>ScreenCapture.py<span class="w">  </span><span class="c1"># Capture l&#39;écran de jeu en temps réel</span>
+│<span class="w">   </span>├──<span class="w"> </span>main.py<span class="w">           </span><span class="c1"># script principal</span>
+<span class="p">|</span><span class="w">   </span>└──<span class="w"> </span>requirement.txt<span class="w">   </span><span class="c1"># les bibliothèques utilisées</span>
+├──<span class="w"> </span>Model<span class="w"> </span>YOLOv8n/
+│<span class="w">   </span>├──<span class="w"> </span>fruit_ninja_v8.pt<span class="w">       </span><span class="c1"># Modèle YOLOv8-nano entraîné</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Confusion<span class="w"> </span>Matrix.jpeg<span class="w">   </span><span class="c1"># Matrice de Confusion</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Metrics.jpeg<span class="w">            </span><span class="c1"># Métriques</span>
+<span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>Validation.jpeg<span class="w">         </span><span class="c1"># Quelques Images de Validation</span>
+├──<span class="w"> </span>README.md<span class="w">             </span><span class="c1"># Aperçu du projet et instructions d&#39;installation</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="modele-ia-yolov8-nano">
+<h1>Modèle IA : YOLOv8-Nano<a class="headerlink" href="#modele-ia-yolov8-nano" title="Lien vers cette rubrique"></a></h1>
+<ul class="simple">
+<li><p><strong>Architecture</strong> : YOLOv8-nano (Ultralytics)</p></li>
+<li><p><strong>Classes</strong> : Fruits (banane, pomme, etc.), Bombes</p></li>
+<li><p><strong>Taille d’entrée</strong> : 640x640</p></li>
+<li><p><strong>Données d’entraînement</strong> : ~1500 images capturées du gameplay</p></li>
+<li><p><strong>Format d’annotation</strong> : Fichiers <code class="docutils literal notranslate"><span class="pre">.txt</span></code> style YOLOv5/8</p></li>
+</ul>
+<section id="metriques-d-evaluation">
+<h2>Métriques d’Évaluation :<a class="headerlink" href="#metriques-d-evaluation" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Précision, Rappel, mAP</strong> presque 1.0 (vérifier Model YOLOv8n/Metrics.png)</p></li>
+<li><p><strong>Matrice de confusion</strong> visualisée dans <code class="docutils literal notranslate"><span class="pre">/metrics/</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="ia-de-decoupe-optimiseur-de-chemin-a">
+<h1>IA de Découpe – Optimiseur de Chemin A*<a class="headerlink" href="#ia-de-decoupe-optimiseur-de-chemin-a" title="Lien vers cette rubrique"></a></h1>
+<p>Pour maximiser le score tout en minimisant le risque :</p>
+<ul class="simple">
+<li><p>Utilise <strong>l’algorithme A*</strong> pour calculer le chemin optimal à travers les groupes de fruits.</p></li>
+<li><p>Évite les bombes et planifie les coupes qui maximisent les combos et bonus.</p></li>
+</ul>
+</section>
+<section id="fonctionnement">
+<h1>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien vers cette rubrique"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Capture d’Écran et Début d’Enregistrement si nécessaire</strong> : Capture continuellement les images du jeu.</p></li>
+<li><p><strong>Détection</strong> : Passe l’image au modèle YOLOv8.</p></li>
+<li><p><strong>Analyse</strong> : Trouve les positions des fruits, évite les bombes.</p></li>
+<li><p><strong>Contrôleur A*</strong> : Calcule le meilleur chemin de balayage.</p></li>
+<li><p><strong>Déclencheur d’Entrée</strong> : Envoie le geste de découpe via l’entrée souris/tactile du système.</p></li>
+</ol>
+</section>
+<section id="en-cours-de-developpement">
+<h1>En Cours de Développement<a class="headerlink" href="#en-cours-de-developpement" title="Lien vers cette rubrique"></a></h1>
+<ul class="simple">
+<li><p>Amélioration de la logique d’évitement des bombes</p></li>
+<li><p>Utilisation d’une Capture d’Écran plus rapide au lieu de mss</p></li>
+</ul>
+</section>
+<section id="executer-le-projet">
+<h1>Exécuter le Projet<a class="headerlink" href="#executer-le-projet" title="Lien vers cette rubrique"></a></h1>
+<p>Cloner le dépôt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MA-Zbida/Fruit-Ninja-AI.git
+<span class="nb">cd</span><span class="w"> </span>Fruit-Nnja-AI
+</pre></div>
+</div>
+<p>Installer les Dépendances et exécuter le script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>src/requirements.txt
+python<span class="w"> </span>src/main.py
+</pre></div>
+</div>
+</section>
+<section id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Lien vers cette rubrique"></a></h1>
+<p>Pour des questions ou une collaboration :</p>
+<p><strong>[ABDERRAZAK KHALIL] – Étudiant en Ingénierie IA</strong></p>
+<p><strong>[ZBIDA MOHAMMED AMINE] – Étudiant en Ingénierie IA</strong></p>
+<p>Email : <a class="reference external" href="mailto:khalilabderrazak1&#37;&#52;&#48;gmail&#46;com">[Abderrazak Khalil]</a></p>
+<p>Email : <a class="reference external" href="mailto:itzzbida&#37;&#52;&#48;gmail&#46;com">[Mohamed Amine Zbida]</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contenus:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index2.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#defis-de-vision-par-ordinateur-dans-fruit-ninja">Défis de Vision par Ordinateur dans Fruit Ninja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#detection-d-objets-en-temps-reel">Détection d’Objets en Temps Réel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#classification-multi-classes-dynamique">Classification Multi-Classes Dynamique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#suivi-d-objets-et-prediction-de-trajectoire">Suivi d’Objets et Prédiction de Trajectoire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#avantages-pedagogiques-et-pratiques">Avantages Pédagogiques et Pratiques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#environnement-controle">Environnement Contrôlé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#feedback-instantane">Feedback Instantané</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#accessibilite-et-reproductibilite">Accessibilité et Reproductibilité</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#applications-transferables">Applications Transférables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#systemes-de-defense-aerienne">Systèmes de Défense Aérienne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#navigation-robotique">Navigation Robotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#surveillance-et-securite">Surveillance et Sécurité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index2.html#interface-homme-machine">Interface Homme-Machine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index2.html#pourquoi-ia-dans-fruit-nnija">Pourquoi IA dans Fruit Nnija</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html">Class Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#sequence-diagram">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index3.html#use-case-diagram">Use Case Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index4.html">Collecte et Préparation des Données</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#processus-de-capture-d-images">Processus de Capture d’Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#annotation-et-etiquetage">Annotation et Étiquetage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index4.html#modele-yolov8-nano-architecture-et-performance">Modèle YOLOv8-Nano : Architecture et Performance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#choix-du-modele">Choix du Modèle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#metriques-de-performance">Métriques de Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#architecture-du-systeme-de-decision">Architecture du Système de Décision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#algorithme-a-pour-l-optimisation-de-trajectoire">Algorithme A* pour l’Optimisation de Trajectoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#strategies-de-decoupe-avancees">Stratégies de Découpe Avancées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index4.html#execution-et-controle-des-mouvements">Exécution et Contrôle des Mouvements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html">Limitations de l’Implémentation Actuelle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#problemes-du-systeme-de-decoupe-code-en-dur">Problèmes du Système de Découpe Codé en Dur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#surcharge-dans-l-extraction-de-caracteristiques">Surcharge dans l’Extraction de Caractéristiques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#solutions-proposees-architecture-flexineck">Solutions Proposées : Architecture FlexiNeck</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#architecture-flexineck-extraction-adaptative">Architecture FlexiNeck : Extraction Adaptative</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#approche-par-apprentissage-par-renforcement">Approche par Apprentissage par Renforcement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#agent-intelligent-pour-le-controle-de-decoupe">Agent Intelligent pour le Contrôle de Découpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#techniques-de-decoupe-dynamiques">Techniques de Découpe Dynamiques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#avantages-de-l-approche-proposee">Avantages de l’Approche Proposée</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#adaptabilite-et-intelligence">Adaptabilité et Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#efficacite-computationnelle">Efficacité Computationnelle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#plan-de-developpement">Plan de Développement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#phase-1-integration-flexineck">Phase 1 : Intégration FlexiNeck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#phase-2-developpement-de-l-agent-rl">Phase 2 : Développement de l’Agent RL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index5.html#phase-3-integration-et-optimisation">Phase 3 : Intégration et Optimisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index5.html#conclusion">Conclusion</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="index2.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, AMINE KHALIL.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
